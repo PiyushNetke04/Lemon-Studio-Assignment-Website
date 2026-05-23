@@ -7,8 +7,7 @@ Inspired by premium glassmorphism UI designs with floating plant compositions, r
 ---
 
 ## 🚀 Live Demo
-
-https://your-vercel-link.vercel.app
+https://lemon-studio-assignment-website.vercel.app/
 
 ---
 
