@@ -1,50 +1,66 @@
 import { FiShoppingBag } from "react-icons/fi";
 
 function ProductCard({ image, title, price, reverse }) {
+
   return (
+
     <div
-      className={`flex flex-col ${
+      className={`mt-16 flex flex-col items-center justify-between gap-14 rounded-[38px] border border-white/10 bg-white/5 p-6 backdrop-blur-md sm:p-8 lg:mt-20 lg:gap-10 lg:rounded-[50px] lg:p-10 ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-      } items-center justify-between gap-10
-      backdrop-blur-md bg-white/5 border border-white/10
-      rounded-[50px] p-10 mt-20`}
+      }`}
     >
-      {/* IMAGE */}
-      <div className="flex-1 flex justify-center">
+
+      {/* ================= IMAGE ================= */}
+      <div className="flex flex-1 justify-center">
+
         <img
           src={image}
           alt={title}
-          className="w-[300px] md:w-[400px] object-contain"
+          className="w-[220px] object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.45)] sm:w-[300px] md:w-[360px] lg:w-[400px]"
         />
+
       </div>
 
-      {/* CONTENT */}
-      <div className="flex-1">
-        <h2 className="text-4xl font-bold">
+      {/* ================= CONTENT ================= */}
+      <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left">
+
+        {/* TITLE */}
+        <h2 className="text-[32px] font-bold leading-[1.2] text-white sm:text-[40px] lg:text-4xl">
           {title}
         </h2>
 
-        <p className="text-gray-300 mt-5 max-w-md">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Sed do eiusmod tempor incididunt ut labore.
+        {/* DESCRIPTION */}
+        <p className="mt-5 max-w-md text-[15px] leading-[1.8] text-gray-300 sm:text-[16px]">
+          Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit.
+          Sed do eiusmod tempor incididunt
+          ut labore.
         </p>
 
-        <h3 className="text-4xl font-bold mt-8">
+        {/* PRICE */}
+        <h3 className="mt-8 text-[32px] font-bold text-white sm:text-[40px] lg:text-4xl">
           Rs. {price}/-
         </h3>
 
-        <div className="flex items-center gap-5 mt-8">
+        {/* ================= BUTTONS ================= */}
+        <div className="mt-8 flex items-center gap-4 sm:gap-5">
 
-          <button className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition">
+          {/* EXPLORE */}
+          <button className="rounded-xl border border-white px-7 py-3 text-[15px] transition hover:bg-white hover:text-black sm:px-8 sm:text-[16px]">
             Explore
           </button>
 
-          <button className="border border-white p-4 rounded-xl hover:bg-white hover:text-black transition">
-            <FiShoppingBag />
+          {/* BAG */}
+          <button className="rounded-xl border border-white p-3 transition hover:bg-white hover:text-black sm:p-4">
+
+            <FiShoppingBag className="text-[18px]" />
+
           </button>
 
         </div>
+
       </div>
+
     </div>
   );
 }

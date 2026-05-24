@@ -4,30 +4,30 @@ function Footer() {
 
   return (
 
-    <footer className="mt-24 border-t border-white/10 bg-white/[0.03] px-6 py-20 backdrop-blur-[10px] md:px-10">
+    <footer className="mt-20 border-t border-white/10 bg-white/[0.03] px-5 py-16 backdrop-blur-[10px] sm:px-8 md:mt-24 md:px-10 md:py-20">
 
-      <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3 lg:gap-16">
 
         {/* ================= LEFT ================= */}
         <div>
 
           {/* LOGO */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 md:justify-start">
 
             <img
               src={navplant}
               alt="logo"
-              className="h-[42px] w-[42px] object-contain"
+              className="h-[34px] w-[34px] object-contain sm:h-[42px] sm:w-[42px]"
             />
 
-            <h1 className="text-[42px] font-bold text-white">
+            <h1 className="text-[32px] font-bold text-white sm:text-[42px]">
               Planto.
             </h1>
 
           </div>
 
           {/* TEXT */}
-          <p className="mt-8 max-w-[420px] text-[17px] leading-[1.9] text-white/65">
+          <p className="mt-6 text-center text-[15px] leading-[1.9] text-white/65 sm:mt-8 sm:text-[17px] md:text-left">
             Lorem ipsum dolor sit amet,
             consectetur adipisicing elit,
             sed do eiusmod tempor incididunt
@@ -35,7 +35,7 @@ function Footer() {
           </p>
 
           {/* SOCIAL */}
-          <div className="mt-12 flex items-center gap-8 text-[18px] font-semibold text-white">
+          <div className="mt-10 flex items-center justify-center gap-7 text-[17px] font-semibold text-white sm:mt-12 sm:gap-8 sm:text-[18px] md:justify-start">
 
             <span className="cursor-pointer transition hover:text-[#8AE234]">
               FB
@@ -54,13 +54,13 @@ function Footer() {
         </div>
 
         {/* ================= MIDDLE ================= */}
-        <div>
+        <div className="text-center md:text-left">
 
-          <h2 className="text-[34px] font-semibold text-white">
+          <h2 className="text-[28px] font-semibold text-white sm:text-[34px]">
             Quick Link’s
           </h2>
 
-          <ul className="mt-10 space-y-6 text-[18px] text-white/65">
+          <ul className="mt-8 space-y-5 text-[16px] text-white/65 sm:mt-10 sm:space-y-6 sm:text-[18px]">
 
             <li className="cursor-pointer transition hover:text-white">
               Home
@@ -85,27 +85,29 @@ function Footer() {
         {/* ================= RIGHT ================= */}
         <div>
 
-          <h2 className="text-[34px] font-semibold text-white">
+          <h2 className="text-center text-[28px] font-semibold text-white sm:text-[34px] md:text-left">
             For Every Update.
           </h2>
 
           {/* INPUT */}
-          <div className="mt-10 flex">
+          <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:gap-0">
 
             <input
               type="email"
               placeholder="Enter Email"
-              className="w-full rounded-l-[16px] border border-white/20 bg-transparent px-5 py-4 text-white outline-none placeholder:text-white/40"
+              className="w-full rounded-[16px] border border-white/20 bg-transparent px-5 py-4 text-white outline-none placeholder:text-white/40 sm:rounded-r-none"
             />
 
-            <button className="rounded-r-[16px] bg-white px-7 font-semibold text-black transition-all duration-300 hover:bg-[#8AE234]">
+            <button className="rounded-[16px] bg-white px-7 py-4 font-semibold text-black transition-all duration-300 hover:bg-[#8AE234] sm:rounded-l-none">
+
               SUBSCRIBE
+
             </button>
 
           </div>
 
           {/* COPYRIGHT */}
-          <p className="mt-20 text-[15px] text-white/45">
+          <p className="mt-14 text-center text-[14px] text-white/45 sm:mt-20 sm:text-[15px] md:text-left">
             Planto © All Right Reserved
           </p>
 
